@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/about.css">
+    <title>Pokedex PureJS - About</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="first_nav">
+            <img src="images/4.png" alt="logo">
+            <h1 class="navbar-title">
+                <span class="bg-color-font-1">Poke</span>
+                <span class="bg-color-font-2">Page</span>
+            </h1>
+        </div>
+
+        <ul class="link_itens">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="about">
+            <aside>
+                <h3 class="title text-center">PokePage v2: Uma Experiência Pokémon Aprimorada</h3>
+                <div class="poke-img">
+                    <img id="pokeImage" class="poke-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png">
+                </div>
+
+                <p>Bem-vindo à evolução da PokePage! Na versão 2, mergulhamos no universo Pokémon com uma abordagem pura
+                    e eficiente, sem depender de frameworks. Cada Pokémon é apresentado de maneira única, com interações
+                    dinâmicas que levam a uma jornada de descobertas. Ao clicar nos cards, desvende informações
+                    específicas sobre cada Pokémon.</p>
+
+                <h4 class="title">O que Torna a PokePage v2 Única:</h4>
+
+                <ul class="ms-3">
+                    <li><strong>Simplicidade com Estilo</strong>: Layout responsivo construído em HTML e estilizado com
+                        CSS, sem excessos.</li>
+                    <li><strong>Interatividade Dinâmica</strong>: JavaScript puro proporciona uma experiência ágil ao
+                        explorar os detalhes dos Pokémon.</li>
+                    <li><strong>Sem Amarra de Frameworks</strong>: Demonstra que é possível criar algo extraordinário
+                        sem a complexidade de frameworks</li>
+                </ul>
+
+                <p class="ms-4">Na PokePage v2, a simplicidade e o poder do código puro são celebrados. O layout
+                    responsivo e
+                    atrativo é
+                    construído com HTML, enquanto o estilo é aplicado através do CSS, sem depender de bibliotecas ou
+                    estruturas complexas. Cada Pokémon é exibido de forma única, destacando suas características
+                    individuais.</p>
+
+                <p>A experiência de usuário é enriquecida com interações dinâmicas em JavaScript puro. Ao clicar nos
+                    cards
+                    dos Pokémon, você será levado a uma página de detalhes, onde poderá explorar informações específicas
+                    sobre o Pokémon escolhido, tudo isso sem a necessidade de frameworks robustos.</p>
+
+                <h4>Por que sem frameworks:</h4>
+
+                <p>Ao optar por não utilizar frameworks, busquei não apenas demonstrar habilidades de programação, mas
+                    também fornecer uma experiência mais ágil e eficiente. A PokePage v2 é uma prova de que é possível
+                    criar
+                    projetos dinâmicos e visualmente atraentes sem a complexidade adicional de frameworks.</p>
+
+                <h4>Explore e Divirta-se:</h4>
+
+                <p>Sinta-se à vontade para explorar a PokePage v2, onde a magia dos Pokémon é celebrada através de
+                    código
+                    limpo e eficiente. Esta versão é mais do que uma página, é uma demonstração do meu comprometimento
+                    com a
+                    criação de experiências digitais envolventes.</p>
+
+                <p>Dê um passeio pela região Pokémon, descubra novos Pokémon e desfrute desta jornada codificada à moda
+                    antiga. Obrigado por visitar a PokePage v2 - onde a paixão pelos Pokémon encontra a maestria do
+                    código
+                    puro!</p>
+
+                <p>
+                    <a href="index" class="cta-button">Explore Agora</a>
+                </p>
+            </aside>
+        </section>
+    </div>
+
+    <script>
+        function getRandomPokemonId() {
+            return Math.floor(Math.random() * 999) + 1;
+        }
+
+        function updatePokemonImage() {
+            const pokeImage = document.getElementById('pokeImage');
+            const randomPokemonId = getRandomPokemonId();
+
+            pokeImage.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${randomPokemonId}.png`;
+        }
+
+        setInterval(updatePokemonImage, 8000);
+    </script>
+
+</body>
+
+</html>
