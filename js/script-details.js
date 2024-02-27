@@ -31,6 +31,12 @@ const url = "https://pokeapi.co/api/v2/pokemon/";
 const card = document.getElementById("card");
 const inputBox = document.getElementById("input-box");
 const resultsBox = document.querySelector(".result-box");
+const btnMenu = document.getElementById("toggleMenu");
+const navLink = document.getElementById("navLinks");
+
+btnMenu.addEventListener('click', () => {
+    navLink.classList.toggle('active');
+})
 
 let getPokeData = (pokemonId) => {
 

@@ -1,8 +1,14 @@
 const pokemons = document.querySelector("#pokemons");
 const inputBox = document.getElementById("input-box");
 const resultsBox = document.querySelector(".result-box");
+const btnMenu = document.getElementById("toggleMenu");
+const navLink = document.getElementById("navLinks");
 
 const pokemonCount = 24;
+
+btnMenu.addEventListener('click', () => {
+    navLink.classList.toggle('active');
+})
 
 inputBox.onkeyup = () => {
     let result = [];

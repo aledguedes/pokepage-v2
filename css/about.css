@@ -89,12 +89,13 @@ a {
     padding: 0;
 }
 
-.bg-color-font-1 {
-    color: #ffcc01;
-}
-
-.bg-color-font-2 {
-    color: #cf1a02;
+.bg-color-font {
+    color: #65f59c;
+    background-image: -webkit-linear-gradient(0deg, #FFCC01 50%, #f12005 28%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
 }
 
 /* ABOUT */
@@ -169,4 +170,21 @@ a:hover {
 .poke-img {
     display: flex;
     justify-content: center;
+}
+
+.button {
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+}
+
+@media screen and (max-width: 576px) {
+
+    .link_itens li {
+        margin-left: 1rem;
+    }
+
+    .cta-button {
+        width: 100%;
+    }
 }
